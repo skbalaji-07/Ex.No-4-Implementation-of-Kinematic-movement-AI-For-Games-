@@ -1,12 +1,10 @@
-# Ex.No: 4  Implementation of Kinematic movement -Seek and Flee behavior in Unity
-
-### DATE:                                                                            
-### REGISTER NUMBER : 
-
+# Ex.No: 4  Implementation of Kinematic movement -seek behavior in Unity
+### DATE: 31/08/2026                                                                            
+### REGISTER NUMBER : 2305003001
+### NAME : Balaji SK
 ### AIM: 
-To write a program to simulate the process of seek and Flee behavior in Unity without NavigationMeshAgent. 
-
-### PROCEDURE:
+To write a program to simulate the process of seek behavior in Unity 
+### Algorithm:
 1. Create a New Unity Project by Open the  Unity Hub and create a new 3D Project,Name the project (e.g., SeekBehaviorDemo).
 2. Create the Moving Object
    In the Hierarchy, right-click → 3D Object → Cube (or Sphere).
@@ -22,17 +20,16 @@ To write a program to simulate the process of seek and Flee behavior in Unity wi
 6. Attach the Script
    Select Seeker in the Hierarchy - Drag & Drop the SeekBehavior script onto the Inspector Panel.
    Drag & Drop the Target from the Hierarchy into the "Target" field in the script component.
-12.  Write a script for flee behavior and attach it to target
-13.  Run the game
-14. Stop the program
+12. Run the game 
+13. Stop the program
     
-### PROGRAM:
+### Program:
 ```
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class seekScript : MonoBehaviour
+public class Script : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform target;  // The object to seek
@@ -55,35 +52,10 @@ public class seekScript : MonoBehaviour
     }
 }
 ```
-```
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+### Output:
+![Adhithya_image](https://github.com/user-attachments/assets/ffc38a64-592b-4ab2-a7fd-87e5a45029e0)
 
-public class fleeScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public Transform target;  // The object to seek
-    public float speed = 5f;  // Movement speed
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (target == null) return;  // Exit if no target is assigned
-
-        // Calculate the desired direction
-        Vector3 direction = (transform.position-target.position).normalized;
-
-        // Move the object towards the target
-        transform.position += direction * speed * Time.deltaTime;
-    }
-}
-```
-### OUTPUT:
+![Adhithya_image](https://github.com/user-attachments/assets/92cad487-9737-42a3-b299-b2b4f584973c)
 
 
 
@@ -92,6 +64,5 @@ public class fleeScript : MonoBehaviour
 
 
 
-
-### RESULT:
+### Result:
 Thus the simple seek behavior was implemented successfully.
